@@ -61,7 +61,7 @@ function Items({items}) {
 function inputFilter(items, filter = '') {
   return items.filter(item => {
     if (filter.length < 1) return item;
-    if ((item.name).toLowerCase().indexOf(filter) >= 0) return item;
+    if ((item.name).toLowerCase().indexOf(filter.toLowerCase()) >= 0) return item;
   })
 }
 

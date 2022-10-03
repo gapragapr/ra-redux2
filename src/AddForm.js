@@ -8,6 +8,8 @@ function AddForm() {
   function handleSubmit(evt) {
     evt.preventDefault();
     dispatch(addItem(form.name, Number(form.price)));
+    const inpts = Array.from(document.querySelectorAll('input'))
+    inpts.forEach(item => item.value = '')
   }
   function handleChange(evt) {
     setForm(prev => ({ ...prev, [evt.target.name]: evt.target.value }));

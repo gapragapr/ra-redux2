@@ -1,9 +1,9 @@
-import { createStore, combineReducers } from 'redux';
+import { legacy_createStore, combineReducers } from 'redux';
 import ItemChange from '../reducers/ItemReducer'
 
 const reducer = combineReducers({
   itemsList: ItemChange,
 });
-const store = createStore(reducer);
+const store = legacy_createStore(reducer);
 
 export default store;
